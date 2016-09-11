@@ -1,19 +1,19 @@
 <?php 
 	/*
-	 * Plugin Name:       TSTE TEMPLATE - TS WP Theme Extension Template
+	 * Plugin Name:       TS Tester Code
 	 * Version:           1.0.0
 	 * Plugin URI:        http://tuningsynesthesia.com/
-	 * Description:       TS Theme Extension (TSTE) Template: ONLY for Developers. 
-	 * Author:            Chie Fuyuki
+	 * Description:       Test code 
+	 * Author:            Bryan Pukanda
 	 * Author URI:        http://tuningsynesthesia.com/
 	 * Requires at least: 4.2.0
 	 * Tested up to:      4.6.2
 	 * Plugin Type:       Piklist
-	 * Text Domain:       tste
+	 * Text Domain:       tstc
 	 * Domain Path:       /lang
 	 * License:	  		  ISC
 	 * @package WordPress
-	 * @author Chie Fuyuki
+	 * @author Bryan Pukanda
 	 * @since 1.0.0
 	 */
 
