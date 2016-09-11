@@ -2,7 +2,7 @@
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
-class Tste {
+class tstc {
     /**
      * The single instance of tste.
      * @var    object
