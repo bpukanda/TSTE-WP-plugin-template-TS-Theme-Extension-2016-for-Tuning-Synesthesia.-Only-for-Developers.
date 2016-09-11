@@ -4,7 +4,7 @@
 	 * Version:           1.0.0
 	 * Plugin URI:        http://tuningsynesthesia.com/
 	 * Description:       Test code 
-	 * Author:            Bryan Pukanda
+	 * Author:            Author Name
 	 * Author URI:        http://tuningsynesthesia.com/
 	 * Requires at least: 4.2.0
 	 * Tested up to:      4.6.2
@@ -13,7 +13,7 @@
 	 * Domain Path:       /lang
 	 * License:	  		  ISC
 	 * @package WordPress
-	 * @author Bryan Pukanda
+	 * @author Author Name
 	 * @since 1.0.0
 	 */
 
@@ -23,8 +23,8 @@
      * @return  Array contains plugin data
      **/
 
-if (!function_exists('tste')) {
-	function tste() {
+if (!function_exists('tstc')) {
+	function tstc() {
 
 		$plugin = _get_the_plugin(__FILE__);
 		$_token = $plugin['TextDomain'];
@@ -34,9 +34,9 @@ if (!function_exists('tste')) {
 		 * Constants
 		 * @since   1.0.0
 		 **/
-		if(!defined('__TSTE_TOKEN__')) define('__TSTE_TOKEN__', $_token);
-		if(!defined('__TSTE_THEME_URL__'))
-			define('__TSTE_THEME_URL__', get_bloginfo('template_directory') . '/');
+		if(!defined('__TSTC_TOKEN__')) define('__TSTC_TOKEN__', $_token);
+		if(!defined('__TSTC_THEME_URL__'))
+			define('__TSTC_THEME_URL__', get_bloginfo('template_directory') . '/');
 
 		/**
 		 * File inclusion
@@ -54,7 +54,7 @@ if (!function_exists('tste')) {
 		 * Piklist Checker inclusion
 		 * @since   1.0.0
 		 **/
-		add_action('init', 'tste_piklist_checker', 0 );
+		add_action('init', 'tstc_piklist_checker', 0 );
 		/**
 		 * Returns the main instance of TS_PTShortcode and TS_PTShortcodeajax to prevent the need to use globals.
 		 *
@@ -62,9 +62,9 @@ if (!function_exists('tste')) {
 		 * @return object
 		 */
 
-		$instance = tste::instance( __FILE__, $_token, $_version );
+		$instance = tstc::instance( __FILE__, $_token, $_version );
 		return $instance;
-	} // End tste()
+	} // End tstc()
 } 
 /**
  * Piklist Checker: Notify users from your plugin when Piklist is not active.
@@ -72,15 +72,15 @@ if (!function_exists('tste')) {
  * @since   0.1.0
  * @return  False when piklist is not active
  */
-if (!function_exists('tste_piklist_checker')) {
-	function tste_piklist_checker(){
+if (!function_exists('tstc_piklist_checker')) {
+	function tstc_piklist_checker(){
 		if(is_admin()) {
 			include_once( 'includes/class-piklist-checker.php');
 			if (!piklist_checker::check(__FILE__)) {
 				return;
 			}
 		}
-	} // End tste_piklist_checker()
+	} // End tstc_piklist_checker()
 }
 /**
  * Get the current plugin data.
@@ -102,4 +102,4 @@ if (!function_exists('_get_the_plugin')) {
     } // End _get_the_plugin ()
 }
 
-tste();
+tstc();
